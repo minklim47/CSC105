@@ -1,0 +1,14 @@
+
+table, th, td {
+  border:1px solid black;
+  text-align: center;
+}
+table{
+  width: 70%;
+}
+.div1{
+  color: blue;
+}
+a{
+  font-size: 30px;
+}
