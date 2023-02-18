@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Simple JavaScript Validation</h1>
+    <form onsubmit="return false">
+        <label for="text">Type something</label><br>
+        <input type="text" id="text" name="text"  required pattern="^[A-Z].*">
+        <input type="submit" id="submit" onclick="getValue()">
+    </form>
+    <h3 style="display:inline">Your input :</h3>
+    <p style="display:inline" id = "result"></p>
+    <p style="color:seagreen">check console log for result :)</p>
+
+    <script>
+        function getValue() {
+            var str = document.getElementById("text").value;
+            document.getElementById("result").innerHTML = str;
+            if (str.match(/^[A-Z]/)){
+                console.log("String's first character is uppercase");
+            }
+            else {
+                console.log("String's first character is not uppercase.");
+            }
+        }
+    </script>
+</body>
+</html>
