@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="addToList()">Add Your Favorite!</button>
+    <p>List of my favorite fruits</p>
+    <ul id="fruitList">
+        <li>Banana</li>
+        <li>Mango</li>
+        <li>Apple</li>
+        <li>Pear</li>
+    </ul>
+    <script>
+        function addToList(){
+            var input = prompt("What is your favorite fruit?");
+            if (input == null || input == "") {
+                return;
+            }
+            else {
+                var li = document.createElement("li");
+                li.innerHTML = input;
+                document.getElementById("fruitList").appendChild(li);
+                document.getElementById("result").innerHTML = input;
+            }
+        }
+    </script>
+</body>
+</html>
