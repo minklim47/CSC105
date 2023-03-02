@@ -1,0 +1,85 @@
+<!-- Declare this document is HTML5 -->
+<!DOCTYPE html>
+
+<!-- Open HTML document -->
+<html>
+
+<!-- Define header of the html (NOT SHOW FOR USER) -->
+<head>
+	<!-- Set character encoding to UTF-8 -->
+	<meta charset="utf-8">
+	<!-- Set content to fit user screen (depending on width of user's device) -->
+	<meta name="viewport" content="width=device-width">
+	<!-- Set Title of this page (Show on the tab) -->
+	<title>Responsive Design with CSS</title>
+	<!-- Loading CSS file into this document -->
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<!-- Define content of the page (SHOW FOR USER) -->
+<body>
+	<!-- 
+		We split screen into 3 big-sections which are:
+		1. Header Content
+		2. Main Content	
+		3. Footer Content
+		And we can build block of content by using <div> tag
+	-->
+
+	<!-- Define Header Content -->
+	<div id="header">
+		<!-- 
+			Inside Header we seperate into 2 sections as follow:
+			1. Logo section
+			2. Navigation section
+		-->
+		
+		<!-- Define Logo section -->
+		<div id='logo'>
+			<h2>Header</h2>
+		</div>
+
+		<!-- Define Navigation section -->
+		<div id='nav'>
+			<ul>
+				<li> Link </li>
+				<li> Link </li>
+				<li> Link </li>
+				<li> Link </li>
+				<li> Link </li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Define Main Content -->
+	<div id="main">
+		<!-- 
+			Inside Main we also seperate into 2 sections as follow:
+			1. Article section
+			2. Sidebar section
+		-->
+
+		<!-- Define Article section -->
+		<div id='article'>
+			<div class='content'>
+				<h1>Responsive Design with CSS</h1>
+				<h3>Resize your browser and test with different resolutions. <a href='http://9lessons.info'>www.9lessons.info</a> </h3>
+			</div>
+		</div>
+
+		<!-- Define Sidebar section -->
+		<div id='sidebar'>
+			<div class='content'>
+				Side Block
+			</div>
+		</div>
+	</div>
+
+	<!-- Define Footer Content -->
+	<div id="footer">
+		<h2>Footer</h2>
+		<iframe src="http://demos.9lessons.info/counter.html" frameborder="0" scrolling="no" height="0"></iframe>
+	</div>
+</body>
+
+</html>
