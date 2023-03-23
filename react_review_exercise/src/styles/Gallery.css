@@ -1,0 +1,8 @@
+.Gallery{
+    margin: 20px;
+}
+
+.Gallery img:hover{
+    transform: scale(1.2, 1.2);
+    transition-duration: 1s;
+}

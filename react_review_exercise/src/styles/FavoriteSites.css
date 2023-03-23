@@ -1,0 +1,27 @@
+.FavoriteSites {
+    margin: 20px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a:link {
+    color: lightgreen;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: lightgreen;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: red;
+  }
+  
+  /* selected link */
+  a:active {
+    color: blue;
+  }
