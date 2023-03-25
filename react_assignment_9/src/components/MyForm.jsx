@@ -31,26 +31,25 @@ function handlePassword(event){
         <div>
             <form onSubmit={handleSubmit}>
                 <label>Email address
-                    <input type="email" value={email} onChange={handleEmail} required/>
+                    <input type="email" name="email" placeholder="Enter Email" value={email} onChange={handleEmail} required/>
                 </label>
                 <br/>
                 <label>Name
-                    <input type="text" value={firstName} onChange={handleFirstName} required/> 
+                    <input type="text" name="firstname" placeholder="Enter First Name" value={firstName} onChange={handleFirstName} required/> 
                 </label>
                 <br/>
                 <label>Lastname
-                    <input type="text" value={lastName} onChange={handleLastName} required/>
+                    <input type="text" name="lastname" placeholder="Enter Last Name" value={lastName} onChange={handleLastName} required/>
                 </label>
                 <br/>
                 <label>Phone Number
-                    <input type="tel" value={number} onChange={handleNumber} pattern="[0-9]{10}" required/>
+                    <input type="tel" name="phone" placeholder="Enter Phone Number" value={number} onChange={handleNumber} pattern="[0-9]{10}" required/>
                 </label>
                 <br/>
                 <label>Password
-                    <input type="password" value={password} onChange={handlePassword} required/>
+                    <input type="password" name="password" placeholder="Enter Password" value={password} onChange={handlePassword} required/>
                 </label>
                 <br/>
-                
                 <input type="submit" value="Submit" required/>
             </form>
         </div>
