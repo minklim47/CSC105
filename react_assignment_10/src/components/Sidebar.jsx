@@ -5,7 +5,7 @@ import {Home, Article, Group, Storefront,Person,Settings, AccountBox} from '@mui
 
 function Sidebar() {
   return (
-    <Box sx={{ display: 'flex', justifyContent:"flex-end"}}>
+    <Box sx={{ display:{ xs:'none', md:'flex'}, justifyContent:'flex-end'}}>
         <List>
             <ListItem>
                 <ListItemIcon>

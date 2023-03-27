@@ -6,16 +6,16 @@ function Content() {
     <Grid
       container>
       <Grid item>
-        <Box>
-          <Typography variant="h4" >Welcome to My Website</Typography>
-          <Typography variant="body1" >
+        <Box spacing={4}>
+          <Typography variant="h4" sx={{mb:2}} >Welcome to My Website</Typography>
+          <Typography variant="body1" sx={{mb:2}}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus,
             labore saepe nihil ipsam provident, soluta maxime voluptatibus
             delectus ipsa nobis quidem, numquam aliquam esse. Exercitationem
             magnam veniam ipsa unde reprehenderit? lore
           </Typography>
           
-          <Typography variant="body1">
+          <Typography variant="body1" sx={{mb:2}}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus,
             labore saepe nihil ipsam provident, soluta maxime voluptatibus
             delectus ipsa nobis quidem, numquam aliquam esse. Exercitationem
@@ -29,7 +29,7 @@ function Content() {
             direction="row"
             alignItems="center"
             spacing={2}>
-          <Grid item xs={6}>
+          <Grid item xs={12} sm={6}>
             <Card>
             <img src="https://picsum.photos/140" width="100%" height="140" object-fit="cover"/>
               <Typography variant="h5">Card Title</Typography>
@@ -41,7 +41,7 @@ function Content() {
               </Typography>
             </Card>
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={12} sm={6}>
             <Card>
               <img src="https://picsum.photos/140" width="100%" height="140" object-fit="cover"/>
               <Typography variant="h5">Card Title</Typography>
@@ -53,7 +53,7 @@ function Content() {
               </Typography>
             </Card>
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={12} sm={6}>
             <Card>
             <img src="https://picsum.photos/140" width="100%" height="140" object-fit="cover"/>
               <Typography variant="h5">Card Title</Typography>

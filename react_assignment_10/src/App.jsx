@@ -10,15 +10,15 @@ function App() {
   return (
     <Box>
       <Nav />
-      <Container className="App">
-        <Grid container direction="row">
-          <Grid item>
+      <Container >
+        <Grid container direction="row" spacing={2} pt={5}>
+          <Grid item xs={3}>
             <Sidebar />
           </Grid>
-          <Grid item>
+          <Grid item xs={12} md={6}>
             <Content />
           </Grid>
-          <Grid item>
+          <Grid item xs={3}>
             <Rightbar />
           </Grid>
         </Grid>
