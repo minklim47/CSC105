@@ -6,19 +6,19 @@ import Todo from "../components/Todo";
 function TodoPage() {
   return (
     <Box
-      sx=
-      {{
+      sx={{
         display: { md: "flex" },
         flexDirection: { md: "row" },
         justifyContent: "center",
         alignItems: "center",
         height: "100vh",
-      }}>
+      }}
+    >
       <Box
-        sx=
-        {{
+        sx={{
           display: { xs: "none", md: "block" },
-        }}>
+        }}
+      >
         <Home />
       </Box>
       <Box
