@@ -96,6 +96,7 @@ const addNewTaskBarStyle = {
     alignItems: "center",
     justifyContent: "center",
     boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
+    
   };
   
   const wrapperTodoListStyle = {
@@ -103,12 +104,14 @@ const addNewTaskBarStyle = {
     flexDirection: "column",
     alignItems: "center",
     marginTop: "20px",
+    
   };
   
   const wrapperHeaderStyle = {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
+    
   };
   
   const headerTextStyle = {
@@ -124,6 +127,7 @@ const addNewTaskBarStyle = {
     borderRadius: "10px",
     color: "white",
     fontWeight: "bold",
+    
   };
   
   const modalStyle = {
@@ -141,6 +145,7 @@ const addNewTaskBarStyle = {
     boxShadow: 24,
     p: 4,
     borderRadius: "10px",
+    
   };
   
   const horizontalStyle = {
