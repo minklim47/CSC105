@@ -1,0 +1,21 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+a{
+  text-decoration: none;
+  margin: 1rem;
+}
+a:active{
+  color: red;
+
+}
+.MuiButton-contained {
+  text-transform: unset !important;
+}
+
+.MuiButton-root {
+  background: linear-gradient(to right, rgba(42,84,135,1), rgba(100,56,130,1))!important;
+}
