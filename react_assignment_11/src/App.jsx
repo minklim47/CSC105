@@ -16,13 +16,15 @@ import { Button } from "@mui/material";
 import AdminPage from "./pages/AdminPage";
 
 function App() {
+  const [userLogin, setUserLogin] = useState(false);
+
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/Home" element={<HomePage />} />
+        <Route path="/Home" element={<HomePage userLogin={userLogin} setUserLogin={setUserLogin}/>} />
         <Route path="/About" element={<AboutPage />} />
         <Route path="/Contact" element={<ContactPage />} />
-        <Route path="/Admin" element={<AdminPage />} />
+        <Route path="/Admin" element={<AdminPage userLogin={userLogin} setUserLogin={setUserLogin}/>} />
       </Routes>
 
       <nav>
