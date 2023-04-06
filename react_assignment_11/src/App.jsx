@@ -22,7 +22,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/Home" element={<HomePage userLogin={userLogin} setUserLogin={setUserLogin}/>} />
+        <Route exect path="/Home" element={<HomePage userLogin={userLogin} setUserLogin={setUserLogin}/>} />
         <Route path="/About" element={<AboutPage />} />
         <Route path="/Contact" element={<ContactPage />} />
         <Route path="/Admin" element={<AdminPage userLogin={userLogin} setUserLogin={setUserLogin}/>} />
