@@ -6,6 +6,7 @@ const bodyParser = require("body-parser");
 const bcrypt = require("bcryptjs");
 const { check, validationResult } = require("express-validator");
 
+
 const connection = mysql.createConnection({
   host: "server2.bsthun.com",
   port: "6105",
@@ -47,8 +48,7 @@ app.post(
     if (!errors.isEmpty()) {
       return res.json({ errors: errors.array() });
     }
-    const salt = await bcrypt.genSalt();
-    const hash = await bcrypt.hash(password,salt);
+    const hash = await bcrypt.hash(password, 10);
     connection.query(
       `INSERT INTO users (username, hashed_password) VALUES (?,?)`,
       [username, hash],
