@@ -107,14 +107,6 @@ app.post("/login", async (req, res) => {
               message: "the password is incorrect",
             });
           } else {
-            const token = jwt.sign(
-              {
-                userId: rows[0].id,
-              },
-              "ZJGX1QL7ri6BGJWj3t",
-              { expiresIn: "1d" }
-            );
-            res.cookie("user", token);
             res.json({
               success: true,
               message: "the password is correct",
@@ -127,50 +119,3 @@ app.post("/login", async (req, res) => {
   );
 });
 
-// app.get("/setcookie", (req, res) => {
-//   res.cookie("cookieName", "cookieValue");
-//   res.send("Set cookie successfully!");
-// });
-
-app.get("/checklogin", (req, res) => {
-  console.log(req.cookies);
-  const token = req.cookies.user;
-
-  var decoded = jwt.verify(token, "ZJGX1QL7ri6BGJWj3t");
-  console.log(decoded);
-
-  if (decoded) {
-    res.json({
-      success: true,
-      message: "User is logged in with ID: " + decoded.userId,
-    });
-  } else {
-    res.json({
-      success: false,
-      message: "User is not logged in",
-    });
-  }
-});
-
-app.get("/todo/all", (req, res) => {
-  const token = req.cookies.user
-  const decoded = jwt.verify(token, "ZJGX1QL7ri6BGJWj3t");
-  console.log(decoded.userId);
-  connection.query("SELECT * FROM items WHERE owner_id = ?", [decoded.userId], (err, rows) => {
-		// Check if cannot find the data in the database then return the error
-		if (err) {
-			res.json({
-				success: false,
-				data: null,
-				error: err.message,
-			});
-		} else {
-			// Return data to the client if success
-			return res.json({
-				success: true,
-				data: rows,
-				error: null,
-			});
-		}
-	});
-})
