@@ -6,7 +6,7 @@ const bodyParser = require("body-parser");
 const bcrypt = require("bcryptjs");
 const { check, validationResult, cookie } = require("express-validator");
 var jwt = require("jsonwebtoken");
-const cookieParser = require("cookie-parser")
+const cookieParser = require("cookie-parser");
 
 const connection = mysql.createConnection({
   host: "server2.bsthun.com",
@@ -148,24 +148,30 @@ app.get("/checklogin", (req, res) => {
 });
 
 app.get("/todo/all", (req, res) => {
-  const token = req.cookies.user
+  const token = req.cookies.user;
   const decoded = jwt.verify(token, "ZJGX1QL7ri6BGJWj3t");
   console.log(decoded.userId);
-  connection.query("SELECT * FROM items WHERE owner_id = ?", [decoded.userId], (err, rows) => {
-		// Check if cannot find the data in the database then return the error
-		if (err) {
-			res.json({
-				success: false,
-				data: null,
-				error: err.message,
-			});
-		} else {
-			// Return data to the client if success
-			return res.json({
-				success: true,
-				data: rows,
-				error: null,
-			});
-		}
-	});
-})
+  connection.query(
+    "SELECT * FROM items WHERE owner_id = ?",
+    [decoded.userId],
+    (err, rows) => {
+      // Check if cannot find the data in the database then return the error
+      if (err) {
+        res.json({
+          success: false,
+          data: null,
+          error: err.message,
+        });
+      } else {
+        // Return data to the client if success
+        return res.json({
+          success: true,
+          data: rows,
+          error: null,
+        });
+      }
+    }
+  );
+});
+
+
