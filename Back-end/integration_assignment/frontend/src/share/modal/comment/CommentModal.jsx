@@ -68,6 +68,7 @@ const CommentModal = ({ open = false, handleClose = () => {} }) => {
       return false;
     }
     setError('');
+    setTextField('');
     return true;
   };
 
