@@ -8,11 +8,11 @@ import GlobalContext from '../../Context/GlobalContext';
 import { AxiosError } from 'axios';
 
 const CommentModal = ({ open = false, handleClose = () => {} }) => {
+
+  const { user, setStatus } = useContext(GlobalContext);
   const [textField, setTextField] = useState('');
   const [comments, setComments] = useState([]);
-
   const [error, setError] = useState({});
-  const { setStatus } = useContext(GlobalContext);
 
   useKeyDown(() => {
     handleAddComment();
@@ -35,7 +35,6 @@ const CommentModal = ({ open = false, handleClose = () => {} }) => {
   const handleAddComment = async () => {
     // TODO implement logic
     if (!validateForm()) return;
-
     try {
       const userToken = Cookies.get('UserToken');
       const response = await Axios.post(
@@ -45,11 +44,8 @@ const CommentModal = ({ open = false, handleClose = () => {} }) => {
           headers: { Authorization: `Bearer ${userToken}` },
         }
       );
-
-      // 3. if successful, add new comment to state and close modal
       if (response.data.success) {
         setStatus({ severity: 'success', msg: 'Create comment successfully' });
-        // setComments((prev) => [...prev, response.data.data]);
         setComments([...comments, { id: Math.random(), msg: textField }]);
         resetAndClose();
       }
